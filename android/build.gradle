@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+// we are using googlePlayServicesVersion = "12.0.1" for all dependencies but .. with compileSdkVersion or targetSdkVersion..
+// comes with default latest version i.e 16.0.0 as of today 10/01/2018
+// after v16.0.0, Android target SDK has be to >= 26 and build tool has to be >= 26.0.x
+buildscript {
+    ext {
+        buildToolsVersion = "27.0.3"
+        minSdkVersion = 19
+        compileSdkVersion = 27
+        targetSdkVersion = 26
+        supportLibVersion = "27.1.1"
+        googlePlayServicesVersion = "12.0.1"// should be same as defined in exclude group.. in dependencies inside app build.gradle
+        androidMapsUtilsVersion = "0.5+"
+    }
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.google.gms:google-services:4.0.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com' }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}

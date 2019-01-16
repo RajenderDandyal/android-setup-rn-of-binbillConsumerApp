@@ -1,0 +1,11 @@
+export const TOOGLE_LOADING = "TOOGLE_LOADING";
+
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const REDUCE_FROM_CART = "REDUCE_FROM_CART";
+export const USER_LOCATION = "USER_LOCATION";
+export const DELETE_UNUSED_IMAGES = "DELETE_UNUSED_IMAGES";
+
+export const GET_ERRORS = "GET_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
