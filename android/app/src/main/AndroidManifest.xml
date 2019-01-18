@@ -38,7 +38,7 @@ error faced something like two .. lib mentioned above have same function
       </provider>
       <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyCWgeT6Ouj8ON-8jnABBZ-sNLfVqjdQZg4"/>
+        android:value="yourapikey"/>
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
